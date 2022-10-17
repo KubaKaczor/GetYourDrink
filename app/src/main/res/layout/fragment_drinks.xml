@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".DrinksFragment">
+
+    <TextView
+        android:id="@+id/tvSelect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select category:"
+        android:textStyle="bold"
+        android:textSize="40sp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnOrdinary"
+        />
+
+    <Button
+        android:id="@+id/btnOrdinary"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:text="Ordinary"
+        android:tag="Ordinary drink"
+        android:textSize="22sp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tvSelect"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnCocktail"
+        />
+
+    <Button
+        android:id="@+id/btnCocktail"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:text="Cocktail"
+        android:tag="Cocktail"
+        android:textSize="22sp"
+        app:layout_constraintTop_toTopOf="@id/btnOrdinary"
+        app:layout_constraintStart_toEndOf="@id/btnOrdinary"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <Button
+        android:id="@+id/btnShake"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:text="Shake"
+        android:tag="Shake"
+        android:textSize="22sp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@id/btnOrdinary"
+        app:layout_constraintStart_toStartOf="@id/btnOrdinary"
+        app:layout_constraintTop_toBottomOf="@id/btnOrdinary" />
+
+    <Button
+        android:id="@+id/btnCocoa"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:text="Cocoa"
+        android:tag="Cocoa"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="@id/btnCocktail"
+        app:layout_constraintStart_toStartOf="@id/btnCocktail"
+        app:layout_constraintTop_toTopOf="@id/btnShake" />
+
+    <Button
+        android:id="@+id/btnShot"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:text="Shot"
+        android:tag="Shot"
+        android:textSize="22sp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@id/btnShake"
+        app:layout_constraintStart_toStartOf="@id/btnShake"
+        app:layout_constraintTop_toBottomOf="@id/btnShake" />
+
+    <Button
+        android:id="@+id/btnCoffee"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:text="Coffee"
+        android:tag="Coffee \/ Tea"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="@id/btnCocoa"
+        app:layout_constraintStart_toStartOf="@id/btnCocoa"
+        app:layout_constraintTop_toTopOf="@id/btnShot" />
+
+
+    <Button
+        android:id="@+id/btnLiqueur"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:text="Liqueur"
+        android:tag="Homemade Liqueur"
+        android:textSize="22sp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@id/btnShot"
+        app:layout_constraintStart_toStartOf="@id/btnShot"
+        app:layout_constraintTop_toBottomOf="@id/btnShot" />
+
+    <Button
+        android:id="@+id/btnParty"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:text="Party"
+        android:tag="Punch \/ Party Drink"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="@id/btnCoffee"
+        app:layout_constraintStart_toStartOf="@id/btnCoffee"
+        app:layout_constraintTop_toTopOf="@id/btnLiqueur" />
+
+    <Button
+        android:id="@+id/btnBeer"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:text="Beer"
+        android:tag="Beer"
+        android:textSize="22sp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@id/btnLiqueur"
+        app:layout_constraintStart_toStartOf="@id/btnLiqueur"
+        app:layout_constraintTop_toBottomOf="@id/btnLiqueur" />
+
+    <Button
+        android:id="@+id/btnSoft"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:text="Soft"
+        android:tag="Soft drink"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="@id/btnParty"
+        app:layout_constraintStart_toStartOf="@id/btnParty"
+        app:layout_constraintTop_toTopOf="@id/btnBeer" />
+
+    <Button
+        android:id="@+id/btnOther"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:text="Other"
+        android:tag="Other\/Unknown"
+        android:textSize="22sp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@id/btnBeer"
+        app:layout_constraintStart_toStartOf="@id/btnBeer"
+        app:layout_constraintTop_toBottomOf="@id/btnBeer" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

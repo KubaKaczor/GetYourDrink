@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/drawDrinkFragment">
+
+    <fragment
+        android:id="@+id/drawDrinkFragment"
+        android:name="com.example.getyourdrink.DrawDrinkFragment"
+        android:label="fragment_draw_drink"
+        tools:layout="@layout/fragment_draw_drink" >
+    </fragment>
+    <fragment
+        android:id="@+id/drinksFragment"
+        android:name="com.example.getyourdrink.DrinksFragment"
+        android:label="fragment_drinks"
+        tools:layout="@layout/fragment_drinks" >
+        <action
+            android:id="@+id/action_drinksFragment_to_drinksListFragment"
+            app:destination="@id/drinksListFragment" />
+        <action
+            android:id="@+id/action_drinksFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favouritesFragment"
+        android:name="com.example.getyourdrink.FavouritesFragment"
+        android:label="fragment_favourites"
+        tools:layout="@layout/fragment_favourites" >
+        <action
+            android:id="@+id/action_favouritesFragment_to_drinkInfoFragment"
+            app:destination="@id/drinkInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/drinksListFragment"
+        android:name="com.example.getyourdrink.DrinksListFragment"
+        android:label="fragment_drinks_list"
+        tools:layout="@layout/fragment_drinks_list" >
+        <argument
+            android:name="selected_category"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_drinksListFragment_to_drinkInfoFragment"
+            app:destination="@id/drinkInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/drinkInfoFragment"
+        android:name="com.example.getyourdrink.DrinkInfoFragment"
+        android:label="fragment_drink_info"
+        tools:layout="@layout/fragment_drink_info" >
+        <argument
+            android:name="selected_drink_id"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="empty" />
+        <argument
+            android:name="drink"
+            app:argType="com.example.getyourdrink.data.model.Drink"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.getyourdrink.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_searchFragment_to_drinkInfoFragment"
+            app:destination="@id/drinkInfoFragment" />
+        <argument
+            android:name="query"
+            app:argType="string" />
+    </fragment>
+</navigation>

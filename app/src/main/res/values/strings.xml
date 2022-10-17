@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">GetYourDrink</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="dot">\u25CF</string>
+    <string name="preference_file_key">myPrefs</string>
+    <string name="searchQuery">searchQuery</string>
+</resources>
